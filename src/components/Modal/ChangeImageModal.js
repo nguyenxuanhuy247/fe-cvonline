@@ -7,7 +7,7 @@ import Button from '~/components/Button/Button.js';
 import Image from '~/components/Image/Image.js';
 import CommonUtils from '~/utils/CommonUtils.js';
 import Modal from '~/components/Modal/Modal.js';
-import CropImage from '~/components/Image/CropImage/CropImage.js';
+import CropImage from '~/components/Image/CropImage/cropImage';
 import { JpgImages } from '~/components/Image/Images.js';
 
 const cx = classnames.bind(styles);
