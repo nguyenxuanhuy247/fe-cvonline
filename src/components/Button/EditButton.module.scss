@@ -1,0 +1,37 @@
+@import '../GlobalStyles/GlobalStyles.module.scss';
+
+.wrapper {
+    width: 140px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -102%);
+    display: flex;
+    column-gap: 4px;
+    padding-bottom: 4px;
+    z-index: 10;
+    display: none;
+
+    .btn {
+        padding: 6px;
+        font-size: 20px;
+        border-radius: 4px;
+        border: none;
+        color: #fff;
+        box-shadow: 1px -1px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+
+        &.drag {
+            background-color: var(--primary-color);
+        }
+
+        &.add,
+        &.edit {
+            background-color: #212f3f;
+        }
+
+        &.delete {
+            background-color: red;
+        }
+    }
+}

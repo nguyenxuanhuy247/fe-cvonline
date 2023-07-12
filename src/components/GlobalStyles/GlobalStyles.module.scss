@@ -1,0 +1,200 @@
+@import 'reset-css';
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    // Color
+    --primary-color: #49b253;
+    --green-color-01: #41bc8a;
+    --green-color-02: #87d3a9;
+
+    // Background color
+    --bgc-white: #fff;
+
+    // Button background color
+    --auth-bgc-grey: #f3f5f7;
+    --button-bgc-green-01: #41bc8a;
+    --button-bgc-green-02: #e5f7ed;
+    --button-bgc-grey-01: #f4f5f5;
+    --button-bgc-grey-02: #ddd;
+    --button-bgc-white: #fff;
+
+    // Font fimily
+    --alexandria-font: 'Alexandria', sans-serif;
+    --roboto-font: 'Roboto', sans-serif;
+
+    // Height
+    --header-height: 68px;
+}
+
+html,
+body {
+    font-size: 62.5% !important;
+    overflow: overlay;
+    line-height: 1.4;
+}
+
+body {
+    font-family: var(--roboto-font) !important;
+    font-size: 1.6rem !important;
+    line-height: 1.4;
+}
+
+@media (max-width: 991px) {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+
+// Common
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@mixin btn {
+    display: inline-block;
+    color: var(--primary-color);
+    background-color: var(--button-bgc-white);
+    padding: 8px 20px;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+@mixin solid-btn {
+    @include btn;
+    color: var(--button-bgc-white);
+    background-color: var(--primary-color);
+}
+
+@mixin regular-btn {
+    @include btn;
+
+    color: var(--primary-color);
+    background-color: var(--button-bgc-white);
+
+    &:hover {
+        @include solid-btn;
+    }
+}
+
+@mixin active-btn {
+    @include solid-btn;
+}
+
+@mixin line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin signin-signup-container {
+    font-family: var(--alexandria-font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    user-select: none;
+    background-color: var(--bgc-white);
+}
+
+@mixin auth-logo {
+    display: block;
+    height: 10vmin;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+}
+
+@mixin alert-fail {
+    color: #955267;
+    background-color: #f8d7da;
+}
+
+@mixin alert-success {
+    color: #186376;
+    background-color: #d1e7dd;
+}
+
+// =========================================================================
+
+@mixin flex-max-width-10 {
+    flex: 1 1 10%;
+    max-width: 10%;
+}
+
+@mixin flex-max-width-20 {
+    flex: 1 1 20%;
+    max-width: 20%;
+}
+
+@mixin flex-max-width-25 {
+    flex: 1 1 25%;
+    max-width: 25%;
+}
+
+@mixin flex-max-width-30 {
+    flex: 1 1 30%;
+    max-width: 30%;
+}
+
+@mixin flex-max-width-40 {
+    flex: 1 1 40%;
+    max-width: 40%;
+}
+
+@mixin flex-max-width-50 {
+    flex: 1 1 50%;
+    max-width: 50%;
+}
+
+@mixin flex-max-width-60 {
+    flex: 1 1 60%;
+    max-width: 60%;
+}
+
+@mixin flex-max-width-70 {
+    flex: 1 1 70%;
+    max-width: 70%;
+}
+
+@mixin flex-max-width-80 {
+    flex: 1 1 80%;
+    max-width: 80%;
+}
+
+@mixin flex-max-width-90 {
+    flex: 1 1 90%;
+    max-width: 90%;
+}
+
+@mixin flex-max-width-100 {
+    flex: 1 1 100%;
+    max-width: 100%;
+}

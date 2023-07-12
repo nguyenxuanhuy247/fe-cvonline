@@ -1,0 +1,43 @@
+.social-network {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        color: #fff;
+    }
+
+    .facebook, .google {
+        min-width: 120px;
+        padding: 6px 12px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 6px;
+    }
+
+    .facebook {
+        background-color: #1c74e4;
+
+        &:hover {
+            background-color: #0762d9;
+        }
+    }
+
+    .google {
+        background-color: #d62436;
+
+        &:hover {
+            background-color: #ff0019;
+        }
+    }
+
+    .text {
+        font-size: 1.4rem;
+        color: #fff;
+    }
+}

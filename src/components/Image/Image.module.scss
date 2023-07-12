@@ -1,0 +1,14 @@
+@import '../GlobalStyles/GlobalStyles.module.scss';
+
+.image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    overflow: hidden;
+
+    &.round {
+        border-radius: 50%;
+    }
+}

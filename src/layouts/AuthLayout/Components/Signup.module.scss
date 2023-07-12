@@ -1,0 +1,115 @@
+@import '../../../components/GlobalStyles/GlobalStyles.module.scss';
+
+.signup-container {
+    @include signin-signup-container;
+
+    .form-signup {
+        .form-logo {
+            @include auth-logo;
+        }
+
+        .title {
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .form-group {
+            overflow: hidden;
+
+            .form-input {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                .form-label {
+                    font-weight: 600;
+                    line-height: 1.8rem;
+                    font-size: 1.5;
+                }
+
+                .form-control {
+                    margin-top: 6px;
+                    height: 40px;
+                    padding: 8px 12px;
+                    border: 1px solid #b3b3b3;
+                    border-radius: 4px;
+                    outline: none;
+                    font-size: 1.4rem;
+
+                    &.invalid {
+                        border-color: #f33a58;
+                    }
+
+                    &:hover {
+                        border-color: #1dbfaf;
+                    }
+                }
+
+                .toggle-show-password {
+                    position: absolute;
+                    right: 10px;
+                    top: 48%;
+
+                    .eye {
+                        font-size: 30px;
+                        padding: 4px;
+                        cursor: pointer;
+                        color: #444;
+                    }
+                }
+            }
+
+            .form-message {
+                display: block;
+                height: 20px;
+                font-size: 1.4rem;
+                line-height: 1.5;
+                margin: 4px 0 16px;
+                height: 20px;
+                overflow: hidden;
+                text-align: left;
+                color: #f33a58;
+            }
+        }
+
+        .submit-btn {
+            @include solid-btn;
+
+            font-family: inherit !important;
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+
+    .signin-with {
+        padding-top: 20px;
+        text-align: center;
+        font-size: 1.4rem;
+        color: #555;
+    }
+
+    .switch-signin {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .text {
+            font-size: 1.4rem;
+        }
+
+        & > .signin-btn {
+            @include regular-btn;
+
+            font-family: inherit !important;
+            margin-left: 12px;
+        }
+    }
+}
+
+.spinner {
+    position: fixed;
+}

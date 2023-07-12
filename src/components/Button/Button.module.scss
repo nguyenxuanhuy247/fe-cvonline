@@ -1,0 +1,21 @@
+@import '../../components/GlobalStyles/GlobalStyles.module.scss';
+
+.button {
+    position: relative;
+    font-family: var(--alexandria-font) !important;
+    background-color: var(--button-bgc-grey-01);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 12px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 1.4rem;
+    column-gap: 16px;
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}

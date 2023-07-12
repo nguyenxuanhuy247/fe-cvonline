@@ -1,0 +1,163 @@
+@import '../../../components/GlobalStyles/GlobalStyles.module.scss';
+
+.signin-container {
+    @include signin-signup-container;
+
+    .form-signin {
+        .form-logo {
+            @include auth-logo;
+        }
+
+        .title {
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .form-group {
+            &.invalid {
+                .form-input {
+                    border-color: #f33a58;
+
+                    .form-label {
+                        border-color: #f33a58;
+                    }
+                }
+            }
+
+            .form-input {
+                height: 44px;
+                border: 1px solid #b3b3b3;
+                border-radius: 4px;
+                overflow: hidden;
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    border-color: var(--primary-color);
+                    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+                    .form-label {
+                        border-color: var(--primary-color);
+                    }
+                }
+
+                .form-label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    width: 44px;
+                    padding: 8px;
+                    border-right: 1px solid #b3b3b3;
+                    background-color: #fff;
+
+                    .form-icon {
+                        font-size: 20px;
+                        color: var(--primary-color);
+                    }
+                }
+
+                .form-control {
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                    padding: 0 16px 0 8px;
+                    flex: 1;
+                    height: 100%;
+                    font-size: 1.6rem;
+
+                    &::placeholder {
+                        color: #8d8b8b;
+                    }
+
+                    &:focus {
+                        background-color: #fff;
+                    }
+
+                    &[id='password'] {
+                        padding-right: 44px;
+                    }
+                }
+
+                .toggle-show-password {
+                    position: absolute;
+                    right: 10px;
+
+                    .eye {
+                        font-size: 30px;
+                        padding: 4px;
+                        cursor: pointer;
+                        color: #444;
+                    }
+                }
+            }
+
+            .form-message {
+                display: block;
+                height: 20px;
+                font-size: 1.4rem;
+                line-height: 1.5;
+                margin-top: 4px;
+                height: 20px;
+                overflow: hidden;
+                text-align: left;
+                color: #f33a58;
+            }
+
+            & + .form-group {
+                margin-top: 16px;
+            }
+        }
+
+        .forgot-password {
+            display: block;
+            margin-top: 16px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #1c74e4;
+            text-align: right;
+
+            &:hover {
+                text-decoration: underline;
+                text-underline-offset: 3px;
+            }
+        }
+
+        .submit-btn {
+            @include solid-btn;
+
+            font-family: inherit !important;
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+
+    .signin-with {
+        padding-top: 20px;
+        text-align: center;
+        font-size: 1.4rem;
+        color: #555;
+    }
+
+    .switch-signup {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .text {
+            font-size: 1.4rem;
+        }
+
+        & > .signup-btn {
+            @include regular-btn;
+
+            font-family: inherit !important;
+            margin-left: 12px;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+@import '../../../components/GlobalStyles/GlobalStyles.module.scss';
+
+.technology-list {
+    width: 100%;
+    text-align: center;
+
+    &.sourcecode-list {
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+    }
+
+    .technology-list-inner {
+        @include flex-max-width-100;
+        display: flex;
+        column-gap: 4px;
+        row-gap: 4px;
+        flex-wrap: wrap;
+
+        &.library-list {
+            flex-direction: column;
+        }
+
+        .drag-drop-hover {
+            border: 1px solid var(--primary-color);
+            outline: 3px solid var(--primary-color);
+        }
+    }
+
+    .add-technology-button {
+        width: auto;
+        margin: 12px auto;
+        text-align: center;
+        padding: 8px;
+        color: var(--primary-color);
+        background-color: var(--button-bgc-green-02);
+        border-radius: 4px;
+        font-size: 20px;
+        column-gap: 8px;
+
+        &.sourcecode-list {
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: #fff;
+            background-color: var(--button-bgc-green-01);
+        }
+
+        .left-icon {
+            display: grid;
+            place-items: center;
+            font-size: 24px;
+        }
+
+        .text {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.show-all-edit-button {
+    visibility: visible;
+}
+
+// =================================================================
+
+// Tablet
+@media (min-width: 768px) and (max-width: 991px) {
+    .technology-list {
+        .technology-list-inner {
+            &.sourcecode-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                column-gap: 4px;
+                row-gap: 4px;
+                flex-wrap: wrap;
+            }
+
+            &.sourcecode-list {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .technology-list {
+        &.sourcecode-list {
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .technology-list-inner {
+            &.sourcecode-list {
+                flex-direction: row;
+                justify-content: center;
+                text-align: center;
+                column-gap: 4px;
+                row-gap: 4px;
+                flex-wrap: wrap;
+            }
+
+            &.sourcecode-list {
+                text-align: left;
+            }
+        }
+
+        .add-technology-button {
+            &.sourcecode-list {
+                margin-top: 12px;
+                width: auto;
+            }
+        }
+    }
+}
